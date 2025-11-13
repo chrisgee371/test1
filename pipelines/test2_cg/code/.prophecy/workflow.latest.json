@@ -60,7 +60,7 @@
           "name" : "var_raw_storage_account",
           "kind" : {
             "type" : "string",
-            "value" : "hrdpintstgdev"
+            "value" : "chris_demos"
           },
           "optional" : false,
           "isWorkflowNodeConfiguration" : false,
@@ -78,7 +78,7 @@
           "name" : "var_delta_storage_account",
           "kind" : {
             "type" : "string",
-            "value" : "hrdpdeltastgdev"
+            "value" : "chris_demos"
           },
           "optional" : false,
           "isWorkflowNodeConfiguration" : false,
@@ -87,7 +87,7 @@
           "name" : "var_catalog_name",
           "kind" : {
             "type" : "string",
-            "value" : "hrdp_catalog_dev"
+            "value" : "chris_demos"
           },
           "optional" : false,
           "isWorkflowNodeConfiguration" : false,
@@ -506,7 +506,7 @@
               "name" : "var_raw_storage_account",
               "kind" : {
                 "type" : "string",
-                "value" : "hrdpintstgdev"
+                "value" : "chris_demos"
               },
               "optional" : false,
               "isWorkflowNodeConfiguration" : false,
@@ -524,7 +524,7 @@
               "name" : "var_delta_storage_account",
               "kind" : {
                 "type" : "string",
-                "value" : "hrdpdeltastgdev"
+                "value" : "chris_demos"
               },
               "optional" : false,
               "isWorkflowNodeConfiguration" : false,
@@ -533,7 +533,7 @@
               "name" : "var_catalog_name",
               "kind" : {
                 "type" : "string",
-                "value" : "hrdp_catalog_dev"
+                "value" : "chris_demos"
               },
               "optional" : false,
               "isWorkflowNodeConfiguration" : false,
@@ -957,7 +957,7 @@
               "name" : "var_raw_storage_account",
               "kind" : {
                 "type" : "string",
-                "value" : "hrdpintstgdev"
+                "value" : "chris_demos"
               },
               "optional" : false,
               "isWorkflowNodeConfiguration" : false,
@@ -975,7 +975,7 @@
               "name" : "var_delta_storage_account",
               "kind" : {
                 "type" : "string",
-                "value" : "hrdpdeltastgdev"
+                "value" : "chris_demos"
               },
               "optional" : false,
               "isWorkflowNodeConfiguration" : false,
@@ -984,7 +984,7 @@
               "name" : "var_catalog_name",
               "kind" : {
                 "type" : "string",
-                "value" : "hrdp_catalog_dev"
+                "value" : "chris_demos"
               },
               "optional" : false,
               "isWorkflowNodeConfiguration" : false,
@@ -1390,7 +1390,7 @@
               "name" : "var_raw_storage_account",
               "kind" : {
                 "type" : "string",
-                "value" : "hrdpintstgdev"
+                "value" : "chris_demos"
               },
               "optional" : false,
               "isWorkflowNodeConfiguration" : false,
@@ -1408,7 +1408,7 @@
               "name" : "var_delta_storage_account",
               "kind" : {
                 "type" : "string",
-                "value" : "hrdpdeltastgdev"
+                "value" : "chris_demos"
               },
               "optional" : false,
               "isWorkflowNodeConfiguration" : false,
@@ -1417,7 +1417,7 @@
               "name" : "var_catalog_name",
               "kind" : {
                 "type" : "string",
-                "value" : "hrdp_catalog_dev"
+                "value" : "chris_demos"
               },
               "optional" : false,
               "isWorkflowNodeConfiguration" : false,
@@ -1841,7 +1841,7 @@
               "name" : "var_raw_storage_account",
               "kind" : {
                 "type" : "string",
-                "value" : "hrdpintstgdev"
+                "value" : "chris_demos"
               },
               "optional" : false,
               "isWorkflowNodeConfiguration" : false,
@@ -1859,7 +1859,7 @@
               "name" : "var_delta_storage_account",
               "kind" : {
                 "type" : "string",
-                "value" : "hrdpdeltastgdev"
+                "value" : "chris_demos"
               },
               "optional" : false,
               "isWorkflowNodeConfiguration" : false,
@@ -1868,7 +1868,7 @@
               "name" : "var_catalog_name",
               "kind" : {
                 "type" : "string",
-                "value" : "hrdp_catalog_dev"
+                "value" : "chris_demos"
               },
               "optional" : false,
               "isWorkflowNodeConfiguration" : false,
@@ -17540,54 +17540,6 @@
     "autoUpdateOnRun" : false
   },
   "diagnostics" : [ {
-    "property" : "$.workflow.processes.8hr_tkGBtv5FwE0nVYih7$$KGCe8lxADUkdvzPqyA1l6",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 1,
-    "message" : "Gems inside the subgraph are broken",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  }, {
-    "property" : "$.workflow.processes.8hr_tkGBtv5FwE0nVYih7$$KGCe8lxADUkdvzPqyA1l6.processes.E4PIwmGvQozEOyhIWT-Ox$$3YjVIffoqDu6TnzLo_GDB",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 1,
-    "message" : "ControlFlowOutput Error:: Error occurred while doing Schema Analysis: 'ins_dtm'",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  }, {
-    "property" : "$.workflow.processes.x9UaY2J7gSIcPt4uBIbug$$zeQIlSpGQSDcmCnNtrSNS",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 1,
-    "message" : "Gems inside the subgraph are broken",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  }, {
     "property" : "$.workflow.processes.x9UaY2J7gSIcPt4uBIbug$$zeQIlSpGQSDcmCnNtrSNS.processes.Ihw6qJNZHYfJqVnx2vBW7$$fkb0JqiP-Qn3b8CZIXfW9.ports.outputs",
     "range" : {
       "start" : {
@@ -17604,85 +17556,5 @@
     "tags" : [ ],
     "relatedInformation" : [ ],
     "diagnosticType" : 2
-  }, {
-    "property" : "$.workflow.processes.x9UaY2J7gSIcPt4uBIbug$$zeQIlSpGQSDcmCnNtrSNS.processes.aT1d5KRoiRWABj0Vf_TfY$$LS8MqnxJ50D8mbz9qTjc2",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 1,
-    "message" : "ControlFlowOutput Error:: Error occurred while doing Schema Analysis: 'ins_dtm'",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  }, {
-    "property" : "$.workflow.processes.1usNRQ4J9VWFYir1FBng-$$ilfhRBrfVU-b6156F6UqC",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 1,
-    "message" : "Gems inside the subgraph are broken",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  }, {
-    "property" : "$.workflow.processes.1usNRQ4J9VWFYir1FBng-$$ilfhRBrfVU-b6156F6UqC.processes.0RGhVM6qR5gNmPqUq6irk$$PXa-Rrld05C2F_Hdo5Z8Z",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 1,
-    "message" : "ControlFlowOutput Error:: Error occurred while doing Schema Analysis: 'ins_dtm'",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  }, {
-    "property" : "$.workflow.processes.4LzTbrWQMrDIhFm6GoQjt$$in1HqEgVQvoYNcwiPiwcg",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 1,
-    "message" : "Gems inside the subgraph are broken",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  }, {
-    "property" : "$.workflow.processes.4LzTbrWQMrDIhFm6GoQjt$$in1HqEgVQvoYNcwiPiwcg.processes.XZZdhV3ZgUpxbKZTD11Ov$$HvUmUCp6oTeXUG3qJKmw2",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 1,
-    "message" : "ControlFlowOutput Error:: Error occurred while doing Schema Analysis: 'ins_dtm'",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
   } ]
 }

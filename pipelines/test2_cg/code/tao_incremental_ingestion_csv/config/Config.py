@@ -96,10 +96,10 @@ class Config(ConfigBase):
     def update(
             self,
             var_raw_container: str="raw",
-            var_raw_storage_account: str="hrdpintstgdev",
+            var_raw_storage_account: str="chris_demos",
             var_copper_container: str="copper",
-            var_delta_storage_account: str="hrdpdeltastgdev",
-            var_catalog_name: str="hrdp_catalog_dev",
+            var_delta_storage_account: str="chris_demos",
+            var_catalog_name: str="chris_demos",
             var_etl_schema: str="etl",
             var_log_schema: str="log",
             var_bus_dt: str="20250929",
