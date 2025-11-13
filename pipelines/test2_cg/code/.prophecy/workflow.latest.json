@@ -2369,7 +2369,16 @@
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
-                "description" : "Flag indicating if the dataset is currently active or in use.",
+                "description" : "Flag indicating if the dataset is currently active or operational.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ins_dtm",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Timestamp when the record was inserted; Format is YYYY-MM-DD HH:MM:SS.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -2548,7 +2557,16 @@
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
-                "description" : "Flag indicating if the dataset is currently active or in use.",
+                "description" : "Flag indicating if the dataset is currently active or operational.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ins_dtm",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Timestamp when the record was inserted; Format is YYYY-MM-DD HH:MM:SS.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -2728,7 +2746,16 @@
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
-                "description" : "Flag indicating if the dataset is currently active or in use.",
+                "description" : "Flag indicating if the dataset is currently active or operational.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ins_dtm",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Timestamp when the record was inserted; Format is YYYY-MM-DD HH:MM:SS.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -2743,7 +2770,7 @@
       },
       "properties" : {
         "metagemProperty" : {
-          "availableColumnNames" : [ "bronze_table", "raw_file_path", "file_prefix", "file_type", "encryption_type", "field_separator", "part_file", "keys_file", "headers_in_file", "full_load", "inc_load", "critical", "business_keys", "tie_breaker_column", "enabled" ],
+          "availableColumnNames" : [ "bronze_table", "raw_file_path", "file_prefix", "file_type", "encryption_type", "field_separator", "part_file", "keys_file", "headers_in_file", "full_load", "inc_load", "critical", "business_keys", "tie_breaker_column", "enabled", "ins_dtm" ],
           "availableConfigFieldNames" : [ "bronze_table", "raw_file_path", "file_prefix", "file_type", "encryption_type", "field_separator", "part_file", "keys_file", "headers_in_file", "full_load", "inc_load", "critical", "business_keys", "tie_breaker_column", "enabled", "ins_dtm", "var_raw_container", "var_raw_storage_account", "var_copper_container", "var_delta_storage_account", "var_catalog_name", "var_etl_schema", "var_copper_schema", "var_bus_dt", "var_log_container", "var_warning_type", "var_info_type", "var_error_type", "var_file_check", "var_bus_dt_dt", "var_wkf_name", "var_task_name", "var_task_run_id", "var_wkf_run_id", "var_start_timestamp", "var_src_tao_sfic", "var_src_tao_snow", "var_src_tao_8fold", "var_matching_files", "var_aux_insert_datetime", "var_aux_updated_datetime", "var_aux_extract_bus_date", "var_aux_updated_extract_bus_date", "var_extract_bus_dt_tao_sfic", "var_log_type_generic", "var_log_schema", "var_full_load_mode_sfic_tao", "var_critical_file", "var_row_count" ],
           "numberOfThreads" : "5",
           "maxIteration" : "1000",
@@ -3015,7 +3042,16 @@
                   "type" : "integer",
                   "nullable" : true,
                   "metadata" : {
-                    "description" : "Flag indicating if the dataset is currently active or in use.",
+                    "description" : "Flag indicating if the dataset is currently active or operational.",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "ins_dtm",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "Timestamp when the record was inserted; Format is YYYY-MM-DD HH:MM:SS.",
                     "mappings" : [ ],
                     "tags" : [ ]
                   }
@@ -3482,7 +3518,16 @@
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
-                "description" : "Flag indicating if the dataset is currently active or in use.",
+                "description" : "Flag indicating if the dataset is currently active or operational.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ins_dtm",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Timestamp when the record was inserted; Format is YYYY-MM-DD HH:MM:SS.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -3497,7 +3542,7 @@
       },
       "properties" : {
         "metagemProperty" : {
-          "availableColumnNames" : [ "bronze_table", "raw_file_path", "file_prefix", "file_type", "encryption_type", "field_separator", "part_file", "keys_file", "headers_in_file", "full_load", "inc_load", "critical", "business_keys", "tie_breaker_column", "enabled" ],
+          "availableColumnNames" : [ "bronze_table", "raw_file_path", "file_prefix", "file_type", "encryption_type", "field_separator", "part_file", "keys_file", "headers_in_file", "full_load", "inc_load", "critical", "business_keys", "tie_breaker_column", "enabled", "ins_dtm" ],
           "availableConfigFieldNames" : [ "bronze_table", "raw_file_path", "file_prefix", "file_type", "encryption_type", "field_separator", "part_file", "keys_file", "headers_in_file", "full_load", "inc_load", "critical", "business_keys", "tie_breaker_column", "enabled", "ins_dtm", "var_raw_container", "var_raw_storage_account", "var_copper_container", "var_delta_storage_account", "var_catalog_name", "var_etl_schema", "var_copper_schema", "var_bus_dt", "var_log_container", "var_warning_type", "var_info_type", "var_error_type", "var_file_check", "var_bus_dt_dt", "var_wkf_name", "var_task_name", "var_task_run_id", "var_wkf_run_id", "var_start_timestamp", "var_src_tao_sfic", "var_src_tao_snow", "var_src_tao_8fold", "var_matching_files", "var_aux_insert_datetime", "var_aux_updated_datetime", "var_aux_extract_bus_date", "var_aux_updated_extract_bus_date", "var_extract_bus_dt_tao_sfic", "var_log_type_generic", "var_log_schema", "var_full_load_mode_sfic_tao", "var_critical_file", "var_row_count" ],
           "numberOfThreads" : "5",
           "maxIteration" : "1000",
@@ -7359,7 +7404,16 @@
                   "type" : "integer",
                   "nullable" : true,
                   "metadata" : {
-                    "description" : "Flag indicating if the dataset is currently active or in use.",
+                    "description" : "Flag indicating if the dataset is currently active or operational.",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "ins_dtm",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "Timestamp when the record was inserted; Format is YYYY-MM-DD HH:MM:SS.",
                     "mappings" : [ ],
                     "tags" : [ ]
                   }
@@ -7572,7 +7626,16 @@
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
-                "description" : "Flag indicating if the dataset is currently active or in use.",
+                "description" : "Flag indicating if the dataset is currently active or operational.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ins_dtm",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Timestamp when the record was inserted; Format is YYYY-MM-DD HH:MM:SS.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -7587,7 +7650,7 @@
       },
       "properties" : {
         "metagemProperty" : {
-          "availableColumnNames" : [ "bronze_table", "raw_file_path", "file_prefix", "file_type", "encryption_type", "field_separator", "part_file", "keys_file", "headers_in_file", "full_load", "inc_load", "critical", "business_keys", "tie_breaker_column", "enabled" ],
+          "availableColumnNames" : [ "bronze_table", "raw_file_path", "file_prefix", "file_type", "encryption_type", "field_separator", "part_file", "keys_file", "headers_in_file", "full_load", "inc_load", "critical", "business_keys", "tie_breaker_column", "enabled", "ins_dtm" ],
           "availableConfigFieldNames" : [ "bronze_table", "raw_file_path", "file_prefix", "file_type", "encryption_type", "field_separator", "part_file", "keys_file", "headers_in_file", "full_load", "inc_load", "critical", "business_keys", "tie_breaker_column", "enabled", "ins_dtm", "var_raw_container", "var_raw_storage_account", "var_copper_container", "var_delta_storage_account", "var_catalog_name", "var_etl_schema", "var_copper_schema", "var_bus_dt", "var_log_container", "var_warning_type", "var_info_type", "var_error_type", "var_file_check", "var_bus_dt_dt", "var_wkf_name", "var_task_name", "var_task_run_id", "var_wkf_run_id", "var_start_timestamp", "var_src_tao_sfic", "var_src_tao_snow", "var_src_tao_8fold", "var_matching_files", "var_aux_insert_datetime", "var_aux_updated_datetime", "var_aux_extract_bus_date", "var_aux_updated_extract_bus_date", "var_extract_bus_dt_tao_sfic", "var_log_type_generic", "var_log_schema", "var_critical_file", "var_row_count", "var_full_load_mode_sfic_tao" ],
           "numberOfThreads" : "4",
           "maxIteration" : "1000",
@@ -9514,7 +9577,16 @@
                   "type" : "integer",
                   "nullable" : true,
                   "metadata" : {
-                    "description" : "Flag indicating if the dataset is currently active or in use.",
+                    "description" : "Flag indicating if the dataset is currently active or operational.",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "ins_dtm",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "Timestamp when the record was inserted; Format is YYYY-MM-DD HH:MM:SS.",
                     "mappings" : [ ],
                     "tags" : [ ]
                   }
@@ -13242,7 +13314,16 @@
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
-                "description" : "Flag indicating if the dataset is currently active or in use.",
+                "description" : "Flag indicating if the dataset is currently active or operational.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ins_dtm",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Timestamp when the record was inserted; Format is YYYY-MM-DD HH:MM:SS.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -13422,7 +13503,16 @@
               "type" : "integer",
               "nullable" : true,
               "metadata" : {
-                "description" : "Flag indicating if the dataset is currently active or in use.",
+                "description" : "Flag indicating if the dataset is currently active or operational.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ins_dtm",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Timestamp when the record was inserted; Format is YYYY-MM-DD HH:MM:SS.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -13437,7 +13527,7 @@
       },
       "properties" : {
         "metagemProperty" : {
-          "availableColumnNames" : [ "bronze_table", "raw_file_path", "file_prefix", "file_type", "encryption_type", "field_separator", "part_file", "keys_file", "headers_in_file", "full_load", "inc_load", "critical", "business_keys", "tie_breaker_column", "enabled" ],
+          "availableColumnNames" : [ "bronze_table", "raw_file_path", "file_prefix", "file_type", "encryption_type", "field_separator", "part_file", "keys_file", "headers_in_file", "full_load", "inc_load", "critical", "business_keys", "tie_breaker_column", "enabled", "ins_dtm" ],
           "availableConfigFieldNames" : [ "bronze_table", "raw_file_path", "file_prefix", "file_type", "encryption_type", "field_separator", "part_file", "keys_file", "headers_in_file", "full_load", "inc_load", "critical", "business_keys", "tie_breaker_column", "enabled", "ins_dtm", "var_raw_container", "var_raw_storage_account", "var_copper_container", "var_delta_storage_account", "var_catalog_name", "var_etl_schema", "var_copper_schema", "var_bus_dt", "var_log_container", "var_warning_type", "var_info_type", "var_error_type", "var_file_check", "var_bus_dt_dt", "var_wkf_name", "var_task_name", "var_task_run_id", "var_wkf_run_id", "var_start_timestamp", "var_src_tao_sfic", "var_src_tao_snow", "var_src_tao_8fold", "var_matching_files", "var_aux_insert_datetime", "var_aux_updated_datetime", "var_aux_extract_bus_date", "var_aux_updated_extract_bus_date", "var_extract_bus_dt_tao_sfic", "var_log_type_generic", "var_log_schema", "var_full_load_mode_sfic_tao" ],
           "numberOfThreads" : "5",
           "maxIteration" : "1000",
@@ -17347,7 +17437,16 @@
                   "type" : "integer",
                   "nullable" : true,
                   "metadata" : {
-                    "description" : "Flag indicating if the dataset is currently active or in use.",
+                    "description" : "Flag indicating if the dataset is currently active or operational.",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "ins_dtm",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "Timestamp when the record was inserted; Format is YYYY-MM-DD HH:MM:SS.",
                     "mappings" : [ ],
                     "tags" : [ ]
                   }
@@ -17441,7 +17540,7 @@
     "autoUpdateOnRun" : false
   },
   "diagnostics" : [ {
-    "property" : "$.workflow.processes.8hr_tkGBtv5FwE0nVYih7$$KGCe8lxADUkdvzPqyA1l6.properties.metagemProperty.configToColumnMap[15].columnName",
+    "property" : "$.workflow.processes.8hr_tkGBtv5FwE0nVYih7$$KGCe8lxADUkdvzPqyA1l6",
     "range" : {
       "start" : {
         "line" : 0,
@@ -17453,7 +17552,39 @@
       }
     },
     "severity" : 1,
-    "message" : "IteratorSettings error:: Column: ins_dtm maps to Config Field with name: ins_dtm but column Name with name: ins_dtm not found.",
+    "message" : "Gems inside the subgraph are broken",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.8hr_tkGBtv5FwE0nVYih7$$KGCe8lxADUkdvzPqyA1l6.processes.E4PIwmGvQozEOyhIWT-Ox$$3YjVIffoqDu6TnzLo_GDB",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "ControlFlowOutput Error:: Error occurred while doing Schema Analysis: 'ins_dtm'",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.x9UaY2J7gSIcPt4uBIbug$$zeQIlSpGQSDcmCnNtrSNS",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "Gems inside the subgraph are broken",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
@@ -17474,7 +17605,7 @@
     "relatedInformation" : [ ],
     "diagnosticType" : 2
   }, {
-    "property" : "$.workflow.processes.x9UaY2J7gSIcPt4uBIbug$$zeQIlSpGQSDcmCnNtrSNS.properties.metagemProperty.configToColumnMap[15].columnName",
+    "property" : "$.workflow.processes.x9UaY2J7gSIcPt4uBIbug$$zeQIlSpGQSDcmCnNtrSNS.processes.aT1d5KRoiRWABj0Vf_TfY$$LS8MqnxJ50D8mbz9qTjc2",
     "range" : {
       "start" : {
         "line" : 0,
@@ -17486,11 +17617,11 @@
       }
     },
     "severity" : 1,
-    "message" : "IteratorSettings error:: Column: ins_dtm maps to Config Field with name: ins_dtm but column Name with name: ins_dtm not found.",
+    "message" : "ControlFlowOutput Error:: Error occurred while doing Schema Analysis: 'ins_dtm'",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
-    "property" : "$.workflow.processes.1usNRQ4J9VWFYir1FBng-$$ilfhRBrfVU-b6156F6UqC.properties.metagemProperty.configToColumnMap[15].columnName",
+    "property" : "$.workflow.processes.1usNRQ4J9VWFYir1FBng-$$ilfhRBrfVU-b6156F6UqC",
     "range" : {
       "start" : {
         "line" : 0,
@@ -17502,11 +17633,11 @@
       }
     },
     "severity" : 1,
-    "message" : "IteratorSettings error:: Column: ins_dtm maps to Config Field with name: ins_dtm but column Name with name: ins_dtm not found.",
+    "message" : "Gems inside the subgraph are broken",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
-    "property" : "$.workflow.processes.4LzTbrWQMrDIhFm6GoQjt$$in1HqEgVQvoYNcwiPiwcg.properties.metagemProperty.configToColumnMap[15].columnName",
+    "property" : "$.workflow.processes.1usNRQ4J9VWFYir1FBng-$$ilfhRBrfVU-b6156F6UqC.processes.0RGhVM6qR5gNmPqUq6irk$$PXa-Rrld05C2F_Hdo5Z8Z",
     "range" : {
       "start" : {
         "line" : 0,
@@ -17518,7 +17649,39 @@
       }
     },
     "severity" : 1,
-    "message" : "IteratorSettings error:: Column: ins_dtm maps to Config Field with name: ins_dtm but column Name with name: ins_dtm not found.",
+    "message" : "ControlFlowOutput Error:: Error occurred while doing Schema Analysis: 'ins_dtm'",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.4LzTbrWQMrDIhFm6GoQjt$$in1HqEgVQvoYNcwiPiwcg",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "Gems inside the subgraph are broken",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.4LzTbrWQMrDIhFm6GoQjt$$in1HqEgVQvoYNcwiPiwcg.processes.XZZdhV3ZgUpxbKZTD11Ov$$HvUmUCp6oTeXUG3qJKmw2",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "ControlFlowOutput Error:: Error occurred while doing Schema Analysis: 'ins_dtm'",
     "tags" : [ ],
     "relatedInformation" : [ ]
   } ]

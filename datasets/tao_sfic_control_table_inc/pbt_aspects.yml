@@ -105,6 +105,13 @@ schema:
     type: integer
     nullable: true
     metadata:
-      description: Flag indicating if the dataset is currently active or in use.
+      description: Flag indicating if the dataset is currently active or operational.
+      mappings: []
+      tags: []
+  - name: ins_dtm
+    type: string
+    nullable: true
+    metadata:
+      description: Timestamp when the record was inserted; Format is YYYY-MM-DD HH:MM:SS.
       mappings: []
       tags: []
