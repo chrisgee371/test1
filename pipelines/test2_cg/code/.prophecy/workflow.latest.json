@@ -132,7 +132,7 @@
           "name" : "var_log_container",
           "kind" : {
             "type" : "string",
-            "value" : "log"
+            "value" : "demos"
           },
           "optional" : false,
           "isWorkflowNodeConfiguration" : false,
@@ -569,7 +569,7 @@
               "name" : "var_log_container",
               "kind" : {
                 "type" : "string",
-                "value" : "log"
+                "value" : "demos"
               },
               "optional" : false,
               "isWorkflowNodeConfiguration" : false,
@@ -1020,7 +1020,7 @@
               "name" : "var_log_container",
               "kind" : {
                 "type" : "string",
-                "value" : "log"
+                "value" : "demos"
               },
               "optional" : false,
               "isWorkflowNodeConfiguration" : false,
@@ -1453,7 +1453,7 @@
               "name" : "var_log_container",
               "kind" : {
                 "type" : "string",
-                "value" : "log"
+                "value" : "demos"
               },
               "optional" : false,
               "isWorkflowNodeConfiguration" : false,
@@ -1904,7 +1904,7 @@
               "name" : "var_log_container",
               "kind" : {
                 "type" : "string",
-                "value" : "log"
+                "value" : "demos"
               },
               "optional" : false,
               "isWorkflowNodeConfiguration" : false,

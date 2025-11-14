@@ -104,7 +104,7 @@ class Config(ConfigBase):
             var_log_schema: str="demos",
             var_bus_dt: str="20250929",
             var_copper_schema: str="copper",
-            var_log_container: str="log",
+            var_log_container: str="demos",
             var_warning_type: str="WARNING",
             var_info_type: str="INFO",
             var_error_type: str="ERROR",

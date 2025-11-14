@@ -30,7 +30,7 @@ class SubgraphConfig(ConfigBase):
             var_etl_schema: str="etl",
             var_copper_schema: str="copper",
             var_bus_dt: str="20250929",
-            var_log_container: str="log",
+            var_log_container: str="demos",
             var_warning_type: str="WARNING",
             var_info_type: str="INFO",
             var_error_type: str="ERROR",
