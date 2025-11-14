@@ -128,7 +128,7 @@ def tao_safe_read(
     from pyspark.sql import SparkSession, DataFrame
     from pyspark.sql.types import StructType
     #copper_log_table = f"{Config.var_catalog_name}.{Config.var_log_container}.copper_load_log"
-    copper_log_table = "hrdp_catalog_dev.log.copper_load_log"
+    copper_log_table = "chris_demos.demos.copper_load_log"
 
     def safe_read(
             #spark: SparkSession,

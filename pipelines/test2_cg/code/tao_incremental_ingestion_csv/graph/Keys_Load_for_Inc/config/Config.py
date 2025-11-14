@@ -51,7 +51,7 @@ class SubgraphConfig(ConfigBase):
             var_aux_updated_extract_bus_date: str="aux_upd_extract_bus_dt",
             var_extract_bus_dt_tao_sfic: str="20251001",
             var_log_type_generic: str="GENERIC",
-            var_log_schema: str="log",
+            var_log_schema: str="demos",
             var_full_load_mode_sfic_tao: str="1",
             var_critical_file: str="CRITICAL_FILE_CHECK",
             var_row_count: str="ROW_COUNT",

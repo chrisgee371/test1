@@ -101,7 +101,7 @@ class Config(ConfigBase):
             var_delta_storage_account: str="chris_demos",
             var_catalog_name: str="chris_demos",
             var_etl_schema: str="etl",
-            var_log_schema: str="log",
+            var_log_schema: str="demos",
             var_bus_dt: str="20250929",
             var_copper_schema: str="copper",
             var_log_container: str="log",
