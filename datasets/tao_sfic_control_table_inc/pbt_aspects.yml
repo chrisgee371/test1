@@ -6,112 +6,111 @@ schema:
     type: string
     nullable: true
     metadata:
-      description: Name of the initial storage table for raw data.
+      description: ''
       mappings: []
       tags: []
   - name: raw_file_path
     type: string
     nullable: true
     metadata:
-      description: File path where the raw data is stored.
+      description: ''
       mappings: []
       tags: []
   - name: file_prefix
     type: string
     nullable: true
     metadata:
-      description: Prefix used in naming the raw data files.
+      description: ''
       mappings: []
       tags: []
   - name: file_type
     type: string
     nullable: true
     metadata:
-      description: Format of the raw data files, such as CSV or JSON.
+      description: ''
       mappings: []
       tags: []
   - name: encryption_type
     type: string
     nullable: true
     metadata:
-      description: Method used to encrypt the raw data files for security.
+      description: ''
       mappings: []
       tags: []
   - name: field_separator
     type: string
     nullable: true
     metadata:
-      description: Character used to separate fields in the dataset files.
+      description: ''
       mappings: []
       tags: []
   - name: part_file
     type: integer
     nullable: true
     metadata:
-      description: Indicates if the file is a part of a larger file set.
+      description: ''
       mappings: []
       tags: []
   - name: keys_file
     type: integer
     nullable: true
     metadata:
-      description: Indicates if the file contains key information for processing.
+      description: ''
       mappings: []
       tags: []
   - name: headers_in_file
     type: integer
     nullable: true
     metadata:
-      description: Indicates whether the file includes headers.
+      description: ''
       mappings: []
       tags: []
   - name: full_load
     type: integer
     nullable: true
     metadata:
-      description: Flag indicating if the dataset is a full load.
+      description: ''
       mappings: []
       tags: []
   - name: inc_load
     type: integer
     nullable: true
     metadata:
-      description: Flag indicating if incremental loading is enabled for the dataset.
+      description: ''
       mappings: []
       tags: []
   - name: critical
     type: integer
     nullable: true
     metadata:
-      description: Indicator of the dataset's importance or priority level.
+      description: ''
       mappings: []
       tags: []
   - name: business_keys
     type: string
     nullable: true
     metadata:
-      description: Unique identifiers used to distinguish records in the dataset.
+      description: ''
       mappings: []
       tags: []
   - name: tie_breaker_column
     type: string
     nullable: true
     metadata:
-      description: Column used to resolve conflicts when multiple records have the
-        same business keys.
+      description: ''
       mappings: []
       tags: []
   - name: enabled
     type: integer
     nullable: true
     metadata:
-      description: Flag indicating if the dataset is currently active or operational.
+      description: ''
       mappings: []
       tags: []
   - name: ins_dtm
-    type: string
+    type: timestamp
     nullable: true
     metadata:
-      description: Timestamp when the record was inserted; Format is YYYY-MM-DD HH:MM:SS.
+      description: ''
       mappings: []
       tags: []

@@ -26,6 +26,21 @@ pipelines:
       - datasets/Copper_Delta_Table
     subgraphs: []
     dependencies: {}
+  pipelines/test3_cg:
+    name: test3_cg
+    description: ''
+    author: gee.chris@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2025-11-21 14:06:40'
+    datasets:
+      inputs:
+      - datasets/tao_sfic_control_table_inc
+      outputs:
+      - datasets/Copper_Delta_Table
+    subgraphs: []
+    dependencies: {}
 datasets:
   datasets/tao_sfic_control_table_inc:
     name: tao_sfic_control_table_inc

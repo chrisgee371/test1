@@ -1,0 +1,157 @@
+from prophecy.config import ConfigBase
+
+
+class SubgraphConfig(ConfigBase):
+
+    def __init__(
+            self,
+            prophecy_spark=None,
+            bronze_table: str="",
+            raw_file_path: str="",
+            file_prefix: str="",
+            file_type: str="",
+            encryption_type: str="",
+            field_separator: str="",
+            part_file: int=0,
+            keys_file: int=0,
+            headers_in_file: int=0,
+            full_load: int=0,
+            inc_load: int=0,
+            critical: int=0,
+            business_keys: str="",
+            tie_breaker_column: str="",
+            enabled: int=0,
+            ins_dtm: str="",
+            var_raw_container: str="raw",
+            var_raw_storage_account: str="hrdpintstgdev",
+            var_copper_container: str="copper",
+            var_delta_storage_account: str="hrdpdeltastgdev",
+            var_catalog_name: str="hrdp_catalog_dev",
+            var_etl_schema: str="etl",
+            var_copper_schema: str="copper",
+            var_bus_dt: str="20250929",
+            var_log_container: str="log",
+            var_warning_type: str="WARNING",
+            var_info_type: str="INFO",
+            var_error_type: str="ERROR",
+            var_file_check: str="FILE_CHECK",
+            var_bus_dt_dt: str="20250929",
+            var_wkf_name: str="executed from Prophecy",
+            var_task_name: str="tao_incremental_ingestion_csv",
+            var_task_run_id: str="executed from Prophecy",
+            var_wkf_run_id: str="executed from Prophecy",
+            var_start_timestamp: str="1900-01-01 00:00:00",
+            var_src_tao_sfic: str="TAO_SFIC_G",
+            var_src_tao_snow: str="tao_snow",
+            var_src_tao_8fold: str="tao_8fold",
+            var_matching_files: bool=False,
+            var_aux_insert_datetime: str="aux_ins_dtm",
+            var_aux_updated_datetime: str="aux_upd_dtm",
+            var_aux_extract_bus_date: str="aux_extract_bus_dt",
+            var_aux_updated_extract_bus_date: str="aux_upd_extract_bus_dt",
+            var_extract_bus_dt_tao_sfic: str="20251001",
+            var_log_type_generic: str="GENERIC",
+            var_log_schema: str="log",
+            var_full_load_mode_sfic_tao: str="1",
+            **kwargs
+    ):
+        self.bronze_table = bronze_table
+        self.raw_file_path = raw_file_path
+        self.file_prefix = file_prefix
+        self.file_type = file_type
+        self.encryption_type = encryption_type
+        self.field_separator = field_separator
+        self.part_file = part_file
+        self.keys_file = keys_file
+        self.headers_in_file = headers_in_file
+        self.full_load = full_load
+        self.inc_load = inc_load
+        self.critical = critical
+        self.business_keys = business_keys
+        self.tie_breaker_column = tie_breaker_column
+        self.enabled = enabled
+        self.ins_dtm = ins_dtm
+        self.var_raw_container = var_raw_container
+        self.var_raw_storage_account = var_raw_storage_account
+        self.var_copper_container = var_copper_container
+        self.var_delta_storage_account = var_delta_storage_account
+        self.var_catalog_name = var_catalog_name
+        self.var_etl_schema = var_etl_schema
+        self.var_copper_schema = var_copper_schema
+        self.var_bus_dt = var_bus_dt
+        self.var_log_container = var_log_container
+        self.var_warning_type = var_warning_type
+        self.var_info_type = var_info_type
+        self.var_error_type = var_error_type
+        self.var_file_check = var_file_check
+        self.var_bus_dt_dt = var_bus_dt_dt
+        self.var_wkf_name = var_wkf_name
+        self.var_task_name = var_task_name
+        self.var_task_run_id = var_task_run_id
+        self.var_wkf_run_id = var_wkf_run_id
+        self.var_start_timestamp = var_start_timestamp
+        self.var_src_tao_sfic = var_src_tao_sfic
+        self.var_src_tao_snow = var_src_tao_snow
+        self.var_src_tao_8fold = var_src_tao_8fold
+        self.var_matching_files = var_matching_files
+        self.var_aux_insert_datetime = var_aux_insert_datetime
+        self.var_aux_updated_datetime = var_aux_updated_datetime
+        self.var_aux_extract_bus_date = var_aux_extract_bus_date
+        self.var_aux_updated_extract_bus_date = var_aux_updated_extract_bus_date
+        self.var_extract_bus_dt_tao_sfic = var_extract_bus_dt_tao_sfic
+        self.var_log_type_generic = var_log_type_generic
+        self.var_log_schema = var_log_schema
+        self.var_full_load_mode_sfic_tao = var_full_load_mode_sfic_tao
+        pass
+
+    def update(self, updated_config):
+        self.bronze_table = updated_config.bronze_table
+        self.raw_file_path = updated_config.raw_file_path
+        self.file_prefix = updated_config.file_prefix
+        self.file_type = updated_config.file_type
+        self.encryption_type = updated_config.encryption_type
+        self.field_separator = updated_config.field_separator
+        self.part_file = updated_config.part_file
+        self.keys_file = updated_config.keys_file
+        self.headers_in_file = updated_config.headers_in_file
+        self.full_load = updated_config.full_load
+        self.inc_load = updated_config.inc_load
+        self.critical = updated_config.critical
+        self.business_keys = updated_config.business_keys
+        self.tie_breaker_column = updated_config.tie_breaker_column
+        self.enabled = updated_config.enabled
+        self.ins_dtm = updated_config.ins_dtm
+        self.var_raw_container = updated_config.var_raw_container
+        self.var_raw_storage_account = updated_config.var_raw_storage_account
+        self.var_copper_container = updated_config.var_copper_container
+        self.var_delta_storage_account = updated_config.var_delta_storage_account
+        self.var_catalog_name = updated_config.var_catalog_name
+        self.var_etl_schema = updated_config.var_etl_schema
+        self.var_copper_schema = updated_config.var_copper_schema
+        self.var_bus_dt = updated_config.var_bus_dt
+        self.var_log_container = updated_config.var_log_container
+        self.var_warning_type = updated_config.var_warning_type
+        self.var_info_type = updated_config.var_info_type
+        self.var_error_type = updated_config.var_error_type
+        self.var_file_check = updated_config.var_file_check
+        self.var_bus_dt_dt = updated_config.var_bus_dt_dt
+        self.var_wkf_name = updated_config.var_wkf_name
+        self.var_task_name = updated_config.var_task_name
+        self.var_task_run_id = updated_config.var_task_run_id
+        self.var_wkf_run_id = updated_config.var_wkf_run_id
+        self.var_start_timestamp = updated_config.var_start_timestamp
+        self.var_src_tao_sfic = updated_config.var_src_tao_sfic
+        self.var_src_tao_snow = updated_config.var_src_tao_snow
+        self.var_src_tao_8fold = updated_config.var_src_tao_8fold
+        self.var_matching_files = updated_config.var_matching_files
+        self.var_aux_insert_datetime = updated_config.var_aux_insert_datetime
+        self.var_aux_updated_datetime = updated_config.var_aux_updated_datetime
+        self.var_aux_extract_bus_date = updated_config.var_aux_extract_bus_date
+        self.var_aux_updated_extract_bus_date = updated_config.var_aux_updated_extract_bus_date
+        self.var_extract_bus_dt_tao_sfic = updated_config.var_extract_bus_dt_tao_sfic
+        self.var_log_type_generic = updated_config.var_log_type_generic
+        self.var_log_schema = updated_config.var_log_schema
+        self.var_full_load_mode_sfic_tao = updated_config.var_full_load_mode_sfic_tao
+        pass
+
+Config = SubgraphConfig()

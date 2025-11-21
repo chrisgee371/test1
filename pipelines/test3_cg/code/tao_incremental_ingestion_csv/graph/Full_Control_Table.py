@@ -6,7 +6,5 @@ from prophecy.libs import typed_lit
 from tao_incremental_ingestion_csv.config.ConfigStore import *
 from tao_incremental_ingestion_csv.functions import *
 
-def control_table_consolidated(spark: SparkSession) -> DataFrame:
-    return spark.read.table(
-        f"`{Config.var_catalog_name}`.`{Config.var_etl_schema}`.`tao_sfic_control_table_consolidated`"
-    )
+def Full_Control_Table(spark: SparkSession, in0: DataFrame) -> DataFrame:
+    return in0.filter(((col("inc_load") == lit(0)) & (col("full_load") == lit(1))))
