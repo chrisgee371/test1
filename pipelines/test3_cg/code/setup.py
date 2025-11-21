@@ -7,7 +7,7 @@ setup(
     package_data = {'prophecy_config_instances' : ['*.json', '*.py', '*.conf']},
     description = 'workflow',
     install_requires = [
-'prophecy-libs==1.9.36'],
+'prophecy-libs==2.1.5'],
     entry_points = {
 'console_scripts' : [
 'main = tao_incremental_ingestion_csv.pipeline:main'], },

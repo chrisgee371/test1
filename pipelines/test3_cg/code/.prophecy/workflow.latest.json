@@ -13,13 +13,13 @@
     "codeGenConfiguration" : {
       "editableConfig" : true,
       "plibVersion" : {
-        "mavenVersion" : "8.8.2",
-        "pyPiVersion" : "1.9.36"
+        "mavenVersion" : "8.13.2",
+        "pyPiVersion" : "2.1.5"
       },
       "sparkConfigJinjaEnabled" : true
     },
     "id" : "1",
-    "uri" : "pipelines/tao_incremental_ingestion_csv",
+    "uri" : "pipelines/test3_cg",
     "sourceSuggestions" : [ ],
     "pipelineSettingsInfo" : {
       "applicationName" : "tao_poc_ingest_raw_into_copper_and_create_view",
@@ -31,14 +31,14 @@
       }
     },
     "language" : "python",
-    "fabricId" : "1",
+    "fabricId" : "35322",
     "frontEndLanguage" : "sql",
     "mode" : "batch",
     "udfs" : {
       "language" : "python",
       "udfs" : [ ],
-      "functionPackageName" : "jianhongyezhuhsbccomteam.hrdataplatform.functions",
-      "sharedFunctionPackageNames" : [ "prophecy.warehouse.functions", "prophecy.spark_basic.functions" ]
+      "functionPackageName" : "geechrisprophecyioteam.temp1cg.functions",
+      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions" ]
     },
     "udafs" : {
       "language" : "python",
@@ -2155,12 +2155,12 @@
     "buildSystem" : "maven",
     "externalDependencies" : [ ],
     "dependentProjectExternalDependencies" : [ {
-      "projectUID" : "5",
-      "projectName" : "ProphecyWarehousePython",
+      "projectUID" : "12654",
+      "projectName" : "ProphecySparkBasicsPython",
       "externalDependencies" : [ ]
     }, {
-      "projectUID" : "4",
-      "projectName" : "ProphecySparkBasicsPython",
+      "projectUID" : "12655",
+      "projectName" : "ProphecyWarehousePython",
       "externalDependencies" : [ ]
     } ],
     "isImported" : false,
