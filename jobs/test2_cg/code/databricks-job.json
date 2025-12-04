@@ -80,6 +80,6 @@
     "clusterMode" : "Single"
   },
   "secret_scope" : "prophecy_jobs_14794",
-  "sorted_processes" : [ "LuA-qJyYNAgJhCT_acyD3$$yfMxAA8RLvWMREI4DfMI4", "kpiqKvcQ6oklmO39Jt8sU$$1JPB0Re3Uiuk2NtXPk7S7" ],
+  "sorted_processes" : [ "LuA-qJyYNAgJhCT_acyD3$$yfMxAA8RLvWMREI4DfMI4" ],
   "is_prophecy_managed_fabric" : false
 }
