@@ -1,74 +1,39 @@
-name: Prophecy CI/CD (PR)
-
+name: Example CI/CD with GitHub actions
 on:
-  pull_request:
-    types: [opened, synchronize, reopened] # opened = PR created :contentReference[oaicite:1]{index=1}
-
-concurrency:
-  group: prophecy-pr-${{ github.event.pull_request.number }}
-  cancel-in-progress: true
+push:
+branches: - "prod"
 
 env:
-  # Required for PBT to talk to Databricks :contentReference[oaicite:2]{index=2}
-  DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
-  DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
-
-  # Used by `pbt deploy` to fill placeholders in databricks-job.json :contentReference[oaicite:3]{index=3}
-  PROPHECY_PROJECT_ID: ${{ secrets.PROPHECY_PROJECT_ID }}
-
-  # Optional: restrict deployments to specific fabrics/workspaces :contentReference[oaicite:4]{index=4}
-  FABRIC_IDS: ${{ secrets.PROPHECY_FABRIC_IDS }} # e.g. "647,1527"
+DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
+DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
+# replace with your fabric id:
+FABRIC_ID: "4004"
 
 jobs:
-  pbt:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-
+build:
+runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Set up JDK 11 (needed for Scala builds)
-        uses: actions/setup-java@v4
+      - uses: actions/checkout@v3
+      - name: Set up JDK 11
+        uses: actions/setup-java@v3
         with:
-          distribution: temurin
           java-version: "11"
-
-      - name: Set up Python 3.9.13 (recommended)
-        uses: actions/setup-python@v5
+          distribution: "adopt"
+      - name: Set up Python 3.9.13
+        uses: actions/setup-python@v4
         with:
           python-version: "3.9.13"
-          cache: "pip"
-        # PBT recommends Python 3.9.13 :contentReference[oaicite:5]{index=5}
-
-      - name: Install deps (incl. PBT)
+      # Install all python dependencies
+      # prophecy-libs not included here because prophecy-build-tool takes care of it by reading each pipeline's setup.py
+      - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip
-          pip install pyspark==3.3.0 build pytest wheel pytest-html prophecy-build-tool
-          pbt --help
-        # PBT recommends pyspark==3.3.0 and installs via pip :contentReference[oaicite:6]{index=6}
-
-      - name: PBT validate
+          python3 -m pip install --upgrade pip
+          pip3 install build pytest wheel pytest-html pyspark==3.3.0  prophecy-build-tool
+      - name: Run PBT validate
         run: pbt validate --path .
-        # validate/build/test/deploy are core PBT commands :contentReference[oaicite:7]{index=7}
-
-      - name: PBT build
+      - name: Run PBT build
         run: pbt build --path .
-
-      - name: PBT test (runs Prophecy unit tests)
+      - name: Run PBT test
         run: pbt test --path .
-        # Tests run with default config under configs/resources/config :contentReference[oaicite:8]{index=8}
-
-      - name: PBT deploy (on PR)
-        # Secrets aren't available on PRs from forks; this keeps you safe and avoids noisy failures. :contentReference[oaicite:9]{index=9}
-        if: ${{ github.event.pull_request.head.repo.full_name == github.repository && env.DATABRICKS_TOKEN != '' }}
-        run: |
-          RELEASE_VERSION="pr-${{ github.event.pull_request.number }}-${{ github.event.pull_request.head.sha }}"
-          # Note: github.sha is a merge commit for pull_request; head.sha is the PR commit. :contentReference[oaicite:10]{index=10}
-
-          pbt deploy --path . \
-            --release-version "$RELEASE_VERSION" \
-            --project-id "${PROPHECY_PROJECT_ID}" \
-            --skip-builds
-          # Add "--fabric-ids ${FABRIC_IDS}" if you set FABRIC_IDS. :contentReference[oaicite:11]{index=11}
+      - name: Run PBT deploy
+        run: pbt deploy --path . --release-version 1.0 --project-id example_project_id
