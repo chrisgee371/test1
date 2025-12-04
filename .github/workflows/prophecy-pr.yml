@@ -1,35 +1,38 @@
-name: Example CI/CD with GitHub actions
+name: Example CI/CD with GitHub Actions
+
 on:
-push:
-branches: 
-    - dev
+  push:
+    branches:
+      - main
 
 env:
-DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
-DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
-# replace with your fabric id:
-FABRIC_ID: ${{ secrets.FABRIC_ID }}
+  DATABRICKS_HOST: ${{ vars.DATABRICKS_HOST }}         # or secrets if you stored it as a secret
+  DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
+  PROPHECY_PROJECT_ID: ${{ vars.PROPHECY_PROJECT_ID }}
+  PROPHECY_FABRIC_IDS: ${{ vars.FABRIC_ID }} # optional
 
 jobs:
-build:
-runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
+
       - name: Set up JDK 11
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
+          distribution: temurin
           java-version: "11"
-          distribution: "adopt"
+
       - name: Set up Python 3.9.13
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: "3.9.13"
-      # Install all python dependencies
-      # prophecy-libs not included here because prophecy-build-tool takes care of it by reading each pipeline's setup.py
+
       - name: Install dependencies
         run: |
-          python3 -m pip install --upgrade pip
-          pip3 install build pytest wheel pytest-html pyspark==3.3.0  prophecy-build-tool
+          python -m pip install --upgrade pip
+          pip install build pytest wheel pytest-html pyspark==3.3.0 prophecy-build-tool
+
       - name: Run PBT validate
         run: pbt validate --path .
       - name: Run PBT build
@@ -37,4 +40,7 @@ runs-on: ubuntu-latest
       - name: Run PBT test
         run: pbt test --path .
       - name: Run PBT deploy
-        run: pbt deploy --path . --release-version 1.0 --project-id example_project_id
+        run: |
+          pbt deploy --path . --release-version "0.05" \
+            --project-id "${PROPHECY_PROJECT_ID}" \
+            --fabric-ids "${FABRIC_ID}"
