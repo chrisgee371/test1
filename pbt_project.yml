@@ -69,7 +69,33 @@ datasets:
         author: gee.chris@prophecy.io
         createdAt: '2025-11-13 16:12:23'
 templates: {}
-jobs: {}
+jobs:
+  jobs/test2_cg:
+    name: test2_cg
+    description: ''
+    fabricUID: 35322
+    scheduler:
+      Databricks: {}
+    cloudProvider: null
+    jobSize: small
+    scheduleCron: None
+    timeout: null
+    alerting:
+      emails: gee.chris@prophecy.io
+      onStart: true
+      onSuccess: true
+      onFailure: true
+    pipelines:
+    - pipelines/test3_cg
+    jobClusterMode:
+      clusterMode:
+        Single: {}
+      clusterId: null
+    enabled: null
+    createdAt: '2025-12-04 14:45:45'
+    author: gee.chris@prophecy.io
+    models: []
+    sqlProjects: []
 gemContainer:
   languageVersion: '3.10'
   gemLibsVersion: 1.3.4.0

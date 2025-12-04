@@ -1,0 +1,2181 @@
+{
+  "metainfo" : {
+    "type" : "Databricks",
+    "fabricId" : "35322",
+    "jobId" : "jobs/test2_cg",
+    "name" : "test2_cg",
+    "schedule" : "None",
+    "scheduleTimeZone" : "UTC",
+    "jobClusterMode" : {
+      "clusterMode" : "Single"
+    },
+    "enabled" : false,
+    "defaultClusterSize" : "small",
+    "alerting" : {
+      "emails" : "gee.chris@prophecy.io",
+      "onStart" : true,
+      "onSuccess" : true,
+      "onFailure" : true,
+      "onDurationWarningThresholdExceeded" : false
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "retries" : 0,
+      "alerting" : {
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false,
+        "onDurationWarningThresholdExceeded" : false
+      },
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false,
+      "onDurationWarningThresholdExceeded" : false
+    }
+  },
+  "processes" : {
+    "LuA-qJyYNAgJhCT_acyD3$$yfMxAA8RLvWMREI4DfMI4" : {
+      "id" : "LuA-qJyYNAgJhCT_acyD3$$yfMxAA8RLvWMREI4DfMI4",
+      "component" : "Pipeline",
+      "metadata" : {
+        "label" : "Pipeline_1",
+        "slug" : "Pipeline_1",
+        "x" : -700,
+        "y" : -280
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "cX95BCFk9K6JbmTbGrTUj$$knp228ZkAe91YifKprIzr",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "hJWTsoo0RRvGFj03H2dGb$$Y_4mdMtST2yHHfqO1BkWy",
+          "slug" : ""
+        } ]
+      },
+      "settings" : {
+        "type" : "Inherited",
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false,
+          "onDurationWarningThresholdExceeded" : false
+        },
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false,
+        "onDurationWarningThresholdExceeded" : false
+      },
+      "properties" : {
+        "pipelineId" : "pipelines/test3_cg",
+        "configurations" : {
+          "selectedInstance" : "default",
+          "instances" : {
+            "test2_cg" : [ "default" ]
+          },
+          "overrides" : { },
+          "schema" : [ {
+            "name" : "var_raw_container",
+            "optional" : false,
+            "kind" : {
+              "type" : "string",
+              "value" : "raw"
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : false
+          }, {
+            "name" : "var_raw_storage_account",
+            "optional" : false,
+            "kind" : {
+              "type" : "string",
+              "value" : "hrdpintstgdev"
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : false
+          }, {
+            "name" : "var_copper_container",
+            "optional" : false,
+            "kind" : {
+              "type" : "string",
+              "value" : "copper"
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : false
+          }, {
+            "name" : "var_delta_storage_account",
+            "optional" : false,
+            "kind" : {
+              "type" : "string",
+              "value" : "hrdpdeltastgdev"
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : false
+          }, {
+            "name" : "var_catalog_name",
+            "optional" : false,
+            "kind" : {
+              "type" : "string",
+              "value" : "hrdp_catalog_dev"
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : false
+          }, {
+            "name" : "var_etl_schema",
+            "optional" : false,
+            "kind" : {
+              "type" : "string",
+              "value" : "etl"
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : false
+          }, {
+            "name" : "var_log_schema",
+            "optional" : false,
+            "kind" : {
+              "type" : "string",
+              "value" : "log"
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : false
+          }, {
+            "name" : "var_bus_dt",
+            "optional" : false,
+            "kind" : {
+              "type" : "string",
+              "value" : "20250929"
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : false
+          }, {
+            "name" : "var_copper_schema",
+            "optional" : false,
+            "kind" : {
+              "type" : "string",
+              "value" : "copper"
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : false
+          }, {
+            "name" : "var_log_container",
+            "optional" : false,
+            "kind" : {
+              "type" : "string",
+              "value" : "log"
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : false
+          }, {
+            "name" : "var_warning_type",
+            "optional" : false,
+            "comment" : "",
+            "kind" : {
+              "type" : "string",
+              "value" : "WARNING"
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : false
+          }, {
+            "name" : "var_info_type",
+            "optional" : false,
+            "kind" : {
+              "type" : "string",
+              "value" : "INFO"
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : false
+          }, {
+            "name" : "var_error_type",
+            "optional" : false,
+            "kind" : {
+              "type" : "string",
+              "value" : "ERROR"
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : false
+          }, {
+            "name" : "var_file_check",
+            "optional" : false,
+            "kind" : {
+              "type" : "string",
+              "value" : "FILE_CHECK"
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : false
+          }, {
+            "name" : "var_critical_file",
+            "optional" : false,
+            "kind" : {
+              "type" : "string",
+              "value" : "CRITICAL_FILE_CHECK"
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : false
+          }, {
+            "name" : "var_row_count",
+            "optional" : false,
+            "kind" : {
+              "type" : "string",
+              "value" : "ROW_COUNT"
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : false
+          }, {
+            "name" : "var_log_type_generic",
+            "optional" : false,
+            "kind" : {
+              "type" : "string",
+              "value" : "GENERIC"
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : false
+          }, {
+            "name" : "var_bus_dt_dt",
+            "optional" : false,
+            "kind" : {
+              "type" : "string",
+              "value" : "20250929"
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : false
+          }, {
+            "name" : "var_wkf_name",
+            "optional" : false,
+            "kind" : {
+              "type" : "string",
+              "value" : "executed from Prophecy"
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : false
+          }, {
+            "name" : "var_task_name",
+            "optional" : false,
+            "kind" : {
+              "type" : "string",
+              "value" : "tao_incremental_ingestion_csv"
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : false
+          }, {
+            "name" : "var_task_run_id",
+            "optional" : false,
+            "kind" : {
+              "type" : "string",
+              "value" : "executed from Prophecy"
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : false
+          }, {
+            "name" : "var_wkf_run_id",
+            "optional" : false,
+            "kind" : {
+              "type" : "string",
+              "value" : "executed from Prophecy"
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : false
+          }, {
+            "name" : "var_start_timestamp",
+            "optional" : false,
+            "kind" : {
+              "type" : "string",
+              "value" : "1900-01-01 00:00:00"
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : false
+          }, {
+            "name" : "var_src_tao_sfic",
+            "optional" : false,
+            "kind" : {
+              "type" : "string",
+              "value" : "TAO_SFIC_G"
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : false
+          }, {
+            "name" : "var_src_tao_snow",
+            "optional" : false,
+            "kind" : {
+              "type" : "string",
+              "value" : "tao_snow"
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : false
+          }, {
+            "name" : "var_src_tao_8fold",
+            "optional" : false,
+            "kind" : {
+              "type" : "string",
+              "value" : "tao_8fold"
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : false
+          }, {
+            "name" : "var_matching_files",
+            "optional" : false,
+            "kind" : {
+              "type" : "boolean",
+              "value" : false
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : false
+          }, {
+            "name" : "var_aux_insert_datetime",
+            "optional" : false,
+            "kind" : {
+              "type" : "string",
+              "value" : "aux_ins_dtm"
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : false
+          }, {
+            "name" : "var_aux_updated_datetime",
+            "optional" : false,
+            "kind" : {
+              "type" : "string",
+              "value" : "aux_upd_dtm"
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : false
+          }, {
+            "name" : "var_aux_extract_bus_date",
+            "optional" : false,
+            "kind" : {
+              "type" : "string",
+              "value" : "aux_extract_bus_dt"
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : false
+          }, {
+            "name" : "var_aux_updated_extract_bus_date",
+            "optional" : false,
+            "kind" : {
+              "type" : "string",
+              "value" : "aux_upd_extract_bus_dt"
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : false
+          }, {
+            "name" : "var_extract_bus_dt_tao_sfic",
+            "optional" : false,
+            "kind" : {
+              "type" : "string",
+              "value" : "20251001"
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : false
+          }, {
+            "name" : "var_full_load_mode_sfic_tao",
+            "optional" : false,
+            "kind" : {
+              "type" : "string",
+              "value" : "1"
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : false
+          }, {
+            "name" : "Full_Load",
+            "optional" : false,
+            "kind" : {
+              "type" : "record",
+              "fields" : [ {
+                "name" : "bronze_table",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : ""
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "raw_file_path",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : ""
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "file_prefix",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : ""
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "file_type",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : ""
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "encryption_type",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : ""
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "field_separator",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : ""
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "part_file",
+                "optional" : false,
+                "kind" : {
+                  "type" : "int",
+                  "value" : 0
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "keys_file",
+                "optional" : false,
+                "kind" : {
+                  "type" : "int",
+                  "value" : 0
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "headers_in_file",
+                "optional" : false,
+                "kind" : {
+                  "type" : "int",
+                  "value" : 0
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "full_load",
+                "optional" : false,
+                "kind" : {
+                  "type" : "int",
+                  "value" : 0
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "inc_load",
+                "optional" : false,
+                "kind" : {
+                  "type" : "int",
+                  "value" : 0
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "critical",
+                "optional" : false,
+                "kind" : {
+                  "type" : "int",
+                  "value" : 0
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "business_keys",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : ""
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "tie_breaker_column",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : ""
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "enabled",
+                "optional" : false,
+                "kind" : {
+                  "type" : "int",
+                  "value" : 0
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "ins_dtm",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : ""
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_raw_container",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "raw"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_raw_storage_account",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "hrdpintstgdev"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_copper_container",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "copper"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_delta_storage_account",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "hrdpdeltastgdev"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_catalog_name",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "hrdp_catalog_dev"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_etl_schema",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "etl"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_copper_schema",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "copper"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_bus_dt",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "20250929"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_log_container",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "log"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_warning_type",
+                "optional" : false,
+                "comment" : "",
+                "kind" : {
+                  "type" : "string",
+                  "value" : "WARNING"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_info_type",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "INFO"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_error_type",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "ERROR"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_file_check",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "FILE_CHECK"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_bus_dt_dt",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "20250929"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_wkf_name",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "executed from Prophecy"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_task_name",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "tao_incremental_ingestion_csv"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_task_run_id",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "executed from Prophecy"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_wkf_run_id",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "executed from Prophecy"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_start_timestamp",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "1900-01-01 00:00:00"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_src_tao_sfic",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "TAO_SFIC_G"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_src_tao_snow",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "tao_snow"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_src_tao_8fold",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "tao_8fold"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_matching_files",
+                "optional" : false,
+                "kind" : {
+                  "type" : "boolean",
+                  "value" : false
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_aux_insert_datetime",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "aux_ins_dtm"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_aux_updated_datetime",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "aux_upd_dtm"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_aux_extract_bus_date",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "aux_extract_bus_dt"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_aux_updated_extract_bus_date",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "aux_upd_extract_bus_dt"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_extract_bus_dt_tao_sfic",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "20251001"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_log_type_generic",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "GENERIC"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_log_schema",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "log"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_critical_file",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "CRITICAL_FILE_CHECK"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_row_count",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "ROW_COUNT"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_full_load_mode_sfic_tao",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "1"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              } ]
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : true
+          }, {
+            "name" : "Full_Load_for_Inc",
+            "optional" : false,
+            "kind" : {
+              "type" : "record",
+              "fields" : [ {
+                "name" : "bronze_table",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : ""
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "raw_file_path",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : ""
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "file_prefix",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : ""
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "file_type",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : ""
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "encryption_type",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : ""
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "field_separator",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : ""
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "part_file",
+                "optional" : false,
+                "kind" : {
+                  "type" : "int",
+                  "value" : 0
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "keys_file",
+                "optional" : false,
+                "kind" : {
+                  "type" : "int",
+                  "value" : 0
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "headers_in_file",
+                "optional" : false,
+                "kind" : {
+                  "type" : "int",
+                  "value" : 0
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "full_load",
+                "optional" : false,
+                "kind" : {
+                  "type" : "int",
+                  "value" : 0
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "inc_load",
+                "optional" : false,
+                "kind" : {
+                  "type" : "int",
+                  "value" : 0
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "critical",
+                "optional" : false,
+                "kind" : {
+                  "type" : "int",
+                  "value" : 0
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "business_keys",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : ""
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "tie_breaker_column",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : ""
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "enabled",
+                "optional" : false,
+                "kind" : {
+                  "type" : "int",
+                  "value" : 0
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "ins_dtm",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : ""
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_raw_container",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "raw"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_raw_storage_account",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "hrdpintstgdev"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_copper_container",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "copper"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_delta_storage_account",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "hrdpdeltastgdev"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_catalog_name",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "hrdp_catalog_dev"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_etl_schema",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "etl"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_copper_schema",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "copper"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_bus_dt",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "20250929"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_log_container",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "log"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_warning_type",
+                "optional" : false,
+                "comment" : "",
+                "kind" : {
+                  "type" : "string",
+                  "value" : "WARNING"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_info_type",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "INFO"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_error_type",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "ERROR"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_file_check",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "FILE_CHECK"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_bus_dt_dt",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "20250929"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_wkf_name",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "executed from Prophecy"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_task_name",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "tao_incremental_ingestion_csv"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_task_run_id",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "executed from Prophecy"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_wkf_run_id",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "executed from Prophecy"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_start_timestamp",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "1900-01-01 00:00:00"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_src_tao_sfic",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "TAO_SFIC_G"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_src_tao_snow",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "tao_snow"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_src_tao_8fold",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "tao_8fold"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_matching_files",
+                "optional" : false,
+                "kind" : {
+                  "type" : "boolean",
+                  "value" : false
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_aux_insert_datetime",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "aux_ins_dtm"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_aux_updated_datetime",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "aux_upd_dtm"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_aux_extract_bus_date",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "aux_extract_bus_dt"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_aux_updated_extract_bus_date",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "aux_upd_extract_bus_dt"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_extract_bus_dt_tao_sfic",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "20251001"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_log_type_generic",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "GENERIC"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_log_schema",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "log"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_full_load_mode_sfic_tao",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "1"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              } ]
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : true
+          }, {
+            "name" : "Inc_Load_for_Inc",
+            "optional" : false,
+            "kind" : {
+              "type" : "record",
+              "fields" : [ {
+                "name" : "bronze_table",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : ""
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "raw_file_path",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : ""
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "file_prefix",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : ""
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "file_type",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : ""
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "encryption_type",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : ""
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "field_separator",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : ""
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "part_file",
+                "optional" : false,
+                "kind" : {
+                  "type" : "int",
+                  "value" : 0
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "keys_file",
+                "optional" : false,
+                "kind" : {
+                  "type" : "int",
+                  "value" : 0
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "headers_in_file",
+                "optional" : false,
+                "kind" : {
+                  "type" : "int",
+                  "value" : 0
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "full_load",
+                "optional" : false,
+                "kind" : {
+                  "type" : "int",
+                  "value" : 0
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "inc_load",
+                "optional" : false,
+                "kind" : {
+                  "type" : "int",
+                  "value" : 0
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "critical",
+                "optional" : false,
+                "kind" : {
+                  "type" : "int",
+                  "value" : 0
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "business_keys",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : ""
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "tie_breaker_column",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : ""
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "enabled",
+                "optional" : false,
+                "kind" : {
+                  "type" : "int",
+                  "value" : 0
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "ins_dtm",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : ""
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_raw_container",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "raw"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_raw_storage_account",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "hrdpintstgdev"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_copper_container",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "copper"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_delta_storage_account",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "hrdpdeltastgdev"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_catalog_name",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "hrdp_catalog_dev"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_etl_schema",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "etl"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_copper_schema",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "copper"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_bus_dt",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "20250929"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_log_container",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "log"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_warning_type",
+                "optional" : false,
+                "comment" : "",
+                "kind" : {
+                  "type" : "string",
+                  "value" : "WARNING"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_info_type",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "INFO"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_error_type",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "ERROR"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_file_check",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "FILE_CHECK"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_bus_dt_dt",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "20250929"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_wkf_name",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "executed from Prophecy"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_task_name",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "tao_incremental_ingestion_csv"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_task_run_id",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "executed from Prophecy"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_wkf_run_id",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "executed from Prophecy"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_start_timestamp",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "1900-01-01 00:00:00"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_src_tao_sfic",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "TAO_SFIC_G"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_src_tao_snow",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "tao_snow"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_src_tao_8fold",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "tao_8fold"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_matching_files",
+                "optional" : false,
+                "kind" : {
+                  "type" : "boolean",
+                  "value" : false
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_aux_insert_datetime",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "aux_ins_dtm"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_aux_updated_datetime",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "aux_upd_dtm"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_aux_extract_bus_date",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "aux_extract_bus_dt"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_aux_updated_extract_bus_date",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "aux_upd_extract_bus_dt"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_extract_bus_dt_tao_sfic",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "20251001"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_log_type_generic",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "GENERIC"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_log_schema",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "log"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_full_load_mode_sfic_tao",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "1"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_critical_file",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "CRITICAL_FILE_CHECK"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_row_count",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "ROW_COUNT"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              } ]
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : true
+          }, {
+            "name" : "Keys_Load_for_Inc",
+            "optional" : false,
+            "kind" : {
+              "type" : "record",
+              "fields" : [ {
+                "name" : "bronze_table",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : ""
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "raw_file_path",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : ""
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "file_prefix",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : ""
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "file_type",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : ""
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "encryption_type",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : ""
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "field_separator",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : ""
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "part_file",
+                "optional" : false,
+                "kind" : {
+                  "type" : "int",
+                  "value" : 0
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "keys_file",
+                "optional" : false,
+                "kind" : {
+                  "type" : "int",
+                  "value" : 0
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "headers_in_file",
+                "optional" : false,
+                "kind" : {
+                  "type" : "int",
+                  "value" : 0
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "full_load",
+                "optional" : false,
+                "kind" : {
+                  "type" : "int",
+                  "value" : 0
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "inc_load",
+                "optional" : false,
+                "kind" : {
+                  "type" : "int",
+                  "value" : 0
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "critical",
+                "optional" : false,
+                "kind" : {
+                  "type" : "int",
+                  "value" : 0
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "business_keys",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : ""
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "tie_breaker_column",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : ""
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "enabled",
+                "optional" : false,
+                "kind" : {
+                  "type" : "int",
+                  "value" : 0
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "ins_dtm",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : ""
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_raw_container",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "raw"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_raw_storage_account",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "hrdpintstgdev"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_copper_container",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "copper"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_delta_storage_account",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "hrdpdeltastgdev"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_catalog_name",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "hrdp_catalog_dev"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_etl_schema",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "etl"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_copper_schema",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "copper"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_bus_dt",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "20250929"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_log_container",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "log"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_warning_type",
+                "optional" : false,
+                "comment" : "",
+                "kind" : {
+                  "type" : "string",
+                  "value" : "WARNING"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_info_type",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "INFO"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_error_type",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "ERROR"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_file_check",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "FILE_CHECK"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_bus_dt_dt",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "20250929"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_wkf_name",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "executed from Prophecy"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_task_name",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "tao_incremental_ingestion_csv"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_task_run_id",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "executed from Prophecy"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_wkf_run_id",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "executed from Prophecy"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_start_timestamp",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "1900-01-01 00:00:00"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_src_tao_sfic",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "TAO_SFIC_G"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_src_tao_snow",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "tao_snow"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_src_tao_8fold",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "tao_8fold"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_matching_files",
+                "optional" : false,
+                "kind" : {
+                  "type" : "boolean",
+                  "value" : false
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_aux_insert_datetime",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "aux_ins_dtm"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_aux_updated_datetime",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "aux_upd_dtm"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_aux_extract_bus_date",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "aux_extract_bus_dt"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_aux_updated_extract_bus_date",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "aux_upd_extract_bus_dt"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_extract_bus_dt_tao_sfic",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "20251001"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_log_type_generic",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "GENERIC"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_log_schema",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "log"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_full_load_mode_sfic_tao",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "1"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_critical_file",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "CRITICAL_FILE_CHECK"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "var_row_count",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "ROW_COUNT"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              } ]
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : true
+          } ]
+        },
+        "projectId" : "88596"
+      },
+      "conditional" : {
+        "runIf" : "ALL_SUCCESS",
+        "forEach" : false,
+        "forEachConfig" : "",
+        "forEachConcurrency" : 1,
+        "forEachInputVariable" : "",
+        "forEachIterationCount" : null
+      },
+      "parent" : null
+    }
+  },
+  "connections" : [ ]
+}
