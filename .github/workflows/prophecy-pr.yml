@@ -41,6 +41,6 @@ jobs:
         run: pbt test --path .
       - name: Run PBT deploy
         run: |
-          pbt deploy --path . --release-version "0.05" \
+          pbt deploy --path . --release-version "0.0.7" \
             --project-id "${PROPHECY_PROJECT_ID}" \
             --fabric-ids "${FABRIC_ID}"
