@@ -1,0 +1,74 @@
+name: Prophecy CI/CD (PR)
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened] # opened = PR created :contentReference[oaicite:1]{index=1}
+
+concurrency:
+  group: prophecy-pr-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+env:
+  # Required for PBT to talk to Databricks :contentReference[oaicite:2]{index=2}
+  DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
+  DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
+
+  # Used by `pbt deploy` to fill placeholders in databricks-job.json :contentReference[oaicite:3]{index=3}
+  PROPHECY_PROJECT_ID: ${{ secrets.PROPHECY_PROJECT_ID }}
+
+  # Optional: restrict deployments to specific fabrics/workspaces :contentReference[oaicite:4]{index=4}
+  FABRIC_IDS: ${{ secrets.PROPHECY_FABRIC_IDS }} # e.g. "647,1527"
+
+jobs:
+  pbt:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 11 (needed for Scala builds)
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "11"
+
+      - name: Set up Python 3.9.13 (recommended)
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.9.13"
+          cache: "pip"
+        # PBT recommends Python 3.9.13 :contentReference[oaicite:5]{index=5}
+
+      - name: Install deps (incl. PBT)
+        run: |
+          python -m pip install --upgrade pip
+          pip install pyspark==3.3.0 build pytest wheel pytest-html prophecy-build-tool
+          pbt --help
+        # PBT recommends pyspark==3.3.0 and installs via pip :contentReference[oaicite:6]{index=6}
+
+      - name: PBT validate
+        run: pbt validate --path .
+        # validate/build/test/deploy are core PBT commands :contentReference[oaicite:7]{index=7}
+
+      - name: PBT build
+        run: pbt build --path .
+
+      - name: PBT test (runs Prophecy unit tests)
+        run: pbt test --path .
+        # Tests run with default config under configs/resources/config :contentReference[oaicite:8]{index=8}
+
+      - name: PBT deploy (on PR)
+        # Secrets aren't available on PRs from forks; this keeps you safe and avoids noisy failures. :contentReference[oaicite:9]{index=9}
+        if: ${{ github.event.pull_request.head.repo.full_name == github.repository && env.DATABRICKS_TOKEN != '' }}
+        run: |
+          RELEASE_VERSION="pr-${{ github.event.pull_request.number }}-${{ github.event.pull_request.head.sha }}"
+          # Note: github.sha is a merge commit for pull_request; head.sha is the PR commit. :contentReference[oaicite:10]{index=10}
+
+          pbt deploy --path . \
+            --release-version "$RELEASE_VERSION" \
+            --project-id "${PROPHECY_PROJECT_ID}" \
+            --skip-builds
+          # Add "--fabric-ids ${FABRIC_IDS}" if you set FABRIC_IDS. :contentReference[oaicite:11]{index=11}
