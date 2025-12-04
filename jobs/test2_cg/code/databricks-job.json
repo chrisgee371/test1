@@ -2,7 +2,7 @@
   "fabric_id" : "35322",
   "components" : [ {
     "PipelineComponent" : {
-      "path" : "/Volumes/chris_demos/demos/prophecy_artefacts//prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/test3_cg-1.0-py3-none-any.whl",
+      "path" : "/Volumes/chris_demos/demos/prophecy_artefacts/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/test3_cg-1.0-py3-none-any.whl",
       "nodeName" : "Pipeline_1",
       "id" : "LuA-qJyYNAgJhCT_acyD3$$yfMxAA8RLvWMREI4DfMI4",
       "language" : "python",
@@ -68,7 +68,7 @@
           "package" : "prophecy-libs==2.1.5"
         }
       }, {
-        "whl" : "/Volumes/chris_demos/demos/prophecy_artefacts//prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/test3_cg-1.0-py3-none-any.whl"
+        "whl" : "/Volumes/chris_demos/demos/prophecy_artefacts/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/test3_cg-1.0-py3-none-any.whl"
       } ],
       "email_notifications" : { },
       "max_retries" : 0,
