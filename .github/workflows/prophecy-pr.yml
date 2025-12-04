@@ -1,13 +1,14 @@
 name: Example CI/CD with GitHub actions
 on:
 push:
-branches: - "prod"
+branches: 
+    - dev
 
 env:
 DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
 DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
 # replace with your fabric id:
-FABRIC_ID: "4004"
+FABRIC_ID: ${{ secrets.FABRIC_ID }}
 
 jobs:
 build:
