@@ -2,4 +2,5 @@ version: 1
 pipelineVersion:
   version: '2'
 configurations:
+- unspecified_rows
 - default
