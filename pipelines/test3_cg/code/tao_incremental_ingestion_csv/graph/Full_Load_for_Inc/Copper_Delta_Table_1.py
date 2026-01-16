@@ -15,4 +15,4 @@ def Copper_Delta_Table_1(spark: SparkSession, in0: DataFrame):
           f"abfss://{Config.var_copper_container}@{Config.var_delta_storage_account}.dfs.core.windows.net/{Config.bronze_table}"
         )\
         .mode("overwrite")\
-        .saveAsTable("`hrdp_catalog_dev`.`copper`.`copper_delta_table`")
+        .saveAsTable("`chris_demos`.`demos`.`copper_delta_table`")

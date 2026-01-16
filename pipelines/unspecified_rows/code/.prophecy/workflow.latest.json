@@ -959,7 +959,7 @@
         "cache" : false,
         "detailedStats" : false,
         "isImported" : false,
-        "comment" : "Retrieves employee or HR-related data from a central data source for further analysis.",
+        "comment" : "Retrieves business data from a central reporting table for further analysis.",
         "autoUpdateComment" : true
       },
       "ports" : {
