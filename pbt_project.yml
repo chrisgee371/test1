@@ -137,16 +137,23 @@ sqlPipeline: null
 dependencies:
 - modifiedAt: '2025-11-12T15:35:37.590444Z'
   name: plibMaven
-  version: 8.13.2
+  version: 8.15.1
   id: '409927967'
   createdAt: '2025-11-12T15:35:37.590444Z'
   type: plibMaven
-- modifiedAt: '2025-11-12T15:35:37.590444Z'
-  name: plibPypi
-  version: 2.1.5
+  entity: Project
+  enabled: true
+- modifiedAt: '2025-12-11T13:29:05.659Z'
+  name: ProphecyLibsPython
+  version: 2.1.7
   id: '850832242'
   createdAt: '2025-11-12T15:35:37.590444Z'
   type: plibPypi
+  enabled: true
+  description: Default dependency for Prophecy Libs
+  editable: true
+  scope: Project
+  entity: Project
 projectDependencies:
   '12655':
     projectUID: 12655
@@ -160,10 +167,10 @@ projectDependencies:
     projectUID: 12654
     projectName: ProphecySparkBasicsPython
     repositoryPath: gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=
-    version: 0.2.51
+    version: 0.2.53
     isDefault: true
     author: null
-    createdAt: '2025-11-12 15:35:08'
+    createdAt: '2025-12-11 13:29:05'
 flags:
   shouldAddDefaultDependenciesIfAbsent: true
 pipelineConfigurations: {}
