@@ -21,6 +21,7 @@
     },
     "id" : "1",
     "uri" : "pipelines/unspecified_rows",
+    "sourceSuggestions" : [ ],
     "pipelineSettingsInfo" : {
       "applicationName" : "unspecified_rows",
       "hasApplication" : true,
@@ -47,7 +48,16 @@
     "configuration" : {
       "common" : {
         "type" : "record",
-        "fields" : [ ]
+        "fields" : [ {
+          "name" : "var_catalog_name",
+          "kind" : {
+            "type" : "string",
+            "value" : null
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        } ]
       },
       "oldCommon" : {
         "type" : "record",
@@ -91,7 +101,13 @@
     "configTopLevelPackage" : "unspecified_rows",
     "configurationVersion" : "v2"
   },
-  "connections" : [ ],
+  "connections" : [ {
+    "id" : "mTtl4zKFAC8Niat8mS_ZH",
+    "source" : "F9rUtjpqKfkcO_2DudDuL$$DN6YteR7R5o0k3LiEwEWw",
+    "sourcePort" : "gjsdAt3jjAuq0EjaLqJz4$$H9LghrgPqJMkeUQMhZQHm",
+    "target" : "dNg_XdixVAVkWgSJAcEEE$$bjDpgcj7N8AEiEokQxpjS",
+    "targetPort" : "QXKzoPG4mI6bU_r4FdTva$$3YXuZwlR7Wnh51W6ySZSL"
+  } ],
   "processes" : {
     "dNg_XdixVAVkWgSJAcEEE$$bjDpgcj7N8AEiEokQxpjS" : {
       "id" : "dNg_XdixVAVkWgSJAcEEE$$bjDpgcj7N8AEiEokQxpjS",
@@ -111,11 +127,21 @@
       "ports" : {
         "inputs" : [ {
           "id" : "QXKzoPG4mI6bU_r4FdTva$$3YXuZwlR7Wnh51W6ySZSL",
-          "slug" : "in0"
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ ]
+          },
+          "isStreaming" : false
         } ],
         "outputs" : [ {
           "id" : "duG444pN8uknJcoZmPEwq$$rjxF7yk9aUlXN28U0S0Ek",
-          "slug" : "out"
+          "slug" : "out",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ ]
+          },
+          "isStreaming" : false
         } ],
         "selectedInputFields" : [ ],
         "isCustomOutputSchema" : true,
@@ -128,6 +154,33 @@
         "gemId" : "gems/Add_Unspecified_Rows",
         "projectName" : "test2_cg"
       }
+    },
+    "F9rUtjpqKfkcO_2DudDuL$$DN6YteR7R5o0k3LiEwEWw" : {
+      "id" : "F9rUtjpqKfkcO_2DudDuL$$DN6YteR7R5o0k3LiEwEWw",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "Copper_Delta_Table",
+        "slug" : "Copper_Delta_Table",
+        "x" : -600,
+        "y" : -140,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "gjsdAt3jjAuq0EjaLqJz4$$H9LghrgPqJMkeUQMhZQHm",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/Copper_Delta_Table"
+      }
     }
   },
   "ports" : {
@@ -138,7 +191,7 @@
     "autoUpdateOnRun" : false
   },
   "diagnostics" : [ {
-    "property" : "$.workflow.processes.dNg_XdixVAVkWgSJAcEEE$$bjDpgcj7N8AEiEokQxpjS.ports.inputs[0]",
+    "property" : "$.workflow.metainfo.configuration.common.fields[0].kind.value",
     "range" : {
       "start" : {
         "line" : 0,
@@ -150,7 +203,7 @@
       }
     },
     "severity" : 1,
-    "message" : "Please connect input port in0",
+    "message" : "Default values error for key: `var_catalog_name` has empty string value",
     "tags" : [ ],
     "relatedInformation" : [ ]
   } ]

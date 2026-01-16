@@ -50,7 +50,8 @@ pipelines:
     language: python
     createdAt: '2026-01-16 14:06:07'
     datasets:
-      inputs: []
+      inputs:
+      - datasets/Copper_Delta_Table
       outputs: []
     subgraphs: []
     dependencies: {}

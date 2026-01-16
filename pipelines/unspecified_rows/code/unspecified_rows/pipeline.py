@@ -7,7 +7,8 @@ from prophecy.utils import *
 from unspecified_rows.graph import *
 
 def pipeline(spark: SparkSession) -> None:
-    df_Add_Unspecified_Rows_0 = Add_Unspecified_Rows_0(spark)
+    df_Copper_Delta_Table = Copper_Delta_Table(spark)
+    df_Add_Unspecified_Rows_0 = Add_Unspecified_Rows_0(spark, df_Copper_Delta_Table)
 
 def main():
     spark = SparkSession.builder.enableHiveSupport().appName("unspecified_rows").getOrCreate()
