@@ -7,4 +7,4 @@ from unspecified_rows.config.ConfigStore import *
 from unspecified_rows.functions import *
 
 def Copper_Delta_Table(spark: SparkSession) -> DataFrame:
-    return spark.read.table(f"`{Config.var_catalog_name}`.`{Config.var_copper_schema}`.`{Config.bronze_table}`")
+    return spark.read.table("`hrdp_catalog_dev`.`copper`.`copper_delta_table`")
